@@ -1,59 +1,142 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <title>SEAN Portfolio </title>   
-  <link rel="stylesheet" href="Sean.css">
- </head>  
-
-<body>
-<header>
-	   <script>
-			
-			alert("hello")
-			let name  =  " BabyKrisna";
-			let option = true
-			console.log("Sean")
-			let age = null;
-			alert(`hi ${name}`)
-			console.log ("Sean")
-			
-		</script>	
-		
-	     <div>
-			<h1>Portfolio</h1>
-		<nav>
-		   <ul>
-			  <li><a href="#">About</a></li>
-			  <li><a href="#">Projects</a></li>
-			  <li><a href="#">Contact</a></li>
-		   </ul>
-		</nav>
-			
-			<img src="https://th.bing.com/th/id/OIP.8TQ_-5IM67m_4vWQ6JLMTwHaEK?w=207&h=150&c=6&o=7&pid=1.7&rm=3">
- </header>
-		<div class="#Photo">My Photo </div>
-		<h2> Hello, I 'm Sean </h2>
-		<p class="tagline">	
-		Aspiring Web Developer/HTML & CSS Enthusiast Aspiring Ethical Hacker 
-		</p>
-		</div>
-	
-<section id="About">
-      <h2> About Me </h2>
-	  <p>
-			Hi I'm Sean Danielle T Barredo Basketball player and online games
-	  </p>
-</section> 		
-<footer>		
-		
-		<p> DONT STOP AN TILL BELIEVE. </footer>
-
+<head>
+<title>My Personal Website Rawr</title>
 
 <style>
-    	  
-	   
+body{
+    font-family: Arial;
+    margin:0;
+    background:#fff7ed;
+}
 
+header{
+    background:orange;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#ff8c00;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    background:white;
+    border:none;
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+section{
+    display:none;
+    padding:30px;
+}
+
+.active{
+    display:block;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:10px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+footer{
+    background:orange;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
 </style>
 
-  </body>
+<script>
+function showSection(id){
+    var sections = document.querySelectorAll("section");
+    sections.forEach(function(sec){
+        sec.classList.remove("active");
+    });
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>My Portfolio</h1>
+<p>Welcome to my Portfolio</p>
+</header>
+
+<nav>
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('about')">About Me</button>
+<button onclick="showSection('projects')">Projects</button>
+<button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<section id="home" class="active">
+<div class="card">
+<h2>Home</h2>
+<p>Hallur! Welcome to my Portfolio</p>
+<p>This is where you can learn more about me, my projects, and how to contact me.</p>
+</div>
+</section>
+
+<section id="about">
+<div class="card">
+<h2>About Me</h2>
+<p>Hi! My name is Sean Danielle.</p>
+<p>I am interested in learning programming, web design, and building projects using HTML and JavaScript.</p>
+<p>I enjoy creating websites and improving my coding skills.</p>
+</div>
+</section>
+
+<section id="projects">
+<div class="card">
+<h2>Projects</h2>
+
+<h3>Project 1</h3>
+<p>Creating Websites using Java Script.</p>
+
+<h3>Project 2</h3>
+<p>Personal website using HTML and Java Script.</p>
+
+<h3>Project 3</h3>
+<p>Table using Css and Java Script.</p>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>Email: barredoseandanielle@gmail.com</p>
+
+<form onsubmit="alert('Message sent!'); return false;">
+<label>Name:</label><br>
+<input type="text" required><br><br>
+
+<label>Message:</label><br>
+<textarea required></textarea><br><br>
+
+<button type="submit">Send</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© 2025 My Website</p>
+</footer>
+
+</body>
 </html>
